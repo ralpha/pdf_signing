@@ -1,0 +1,21 @@
+[package]
+name = "pdf_signing"
+description = "Crate for adding signatures and digitaly sign pdf documents."
+version = "0.1.0"
+authors = ["Ralph Bisschops <ralph.bisschops.dev@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["pdf", "signing"]
+categories = ["encoding", "graphics"]
+repository = "https://github.com/ralpha/pdf_signing"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.14"
+lopdf = { version = "0.27.0", features = [
+    "chrono_time",
+    "nom_parser",
+], default-features = false, git = "https://github.com/J-F-Liu/lopdf", branch = "master" }
+png = "0.17.2"
