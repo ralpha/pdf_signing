@@ -1,8 +1,11 @@
 use crate::Error;
 use lopdf::{Document, Object, ObjectId};
 
-pub(super) trait PdfObjectDeref {
+pub(crate) trait PdfObjectDeref {
     fn deref<'a>(&'a self, doc: &'a Document) -> Result<&'a Object, Error>;
+
+    // `deref_mut` can not be created because of borrowing rules
+    // Because borrow and mutable borrow is needed at same time.
 
     fn get_object_id(&self) -> Option<ObjectId>;
 }

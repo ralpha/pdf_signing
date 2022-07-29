@@ -9,6 +9,10 @@ NOTE: This crate is still work in progress and not all features are implemented 
 
 This library only supports PNG images as the signature images.
 
+## Examples
+
+- Sign Document: `cargo run --example sign_doc`
+
 ## License
 
 The code in this project is licensed under the MIT or Apache 2.0 license.
