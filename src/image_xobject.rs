@@ -24,7 +24,7 @@ pub struct ImageXObject {
     pub s_mask: Option<ObjectId>,
 }
 
-impl<'a> ImageXObject {
+impl ImageXObject {
     // TODO: remove `unwrap`s
     /// Returns 1 or 2 images. The first is the color images.
     /// The second is (if present) the mask/alpha channel of the image.
