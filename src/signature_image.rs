@@ -131,10 +131,10 @@ impl PDFSigningDocument {
                     if child_rect.len() >= 4 {
                         // Found a reference, set as return value
                         rect = Some(Rectangle {
-                            x1: child_rect[0].as_f64()?,
-                            y1: child_rect[1].as_f64()?,
-                            x2: child_rect[2].as_f64()?,
-                            y2: child_rect[3].as_f64()?,
+                            x1: child_rect[0].as_f32()?,
+                            y1: child_rect[1].as_f32()?,
+                            x2: child_rect[2].as_f32()?,
+                            y2: child_rect[3].as_f32()?,
                         });
                     }
                 }
