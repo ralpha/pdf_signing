@@ -11,7 +11,7 @@ This library only supports PNG images as the signature images.
 
 ## Examples
 
-- Sign Document: `cargo run --example sign_doc`
+- Sign Document: `cargo run --example sign_doc` ([create cert first](./Create_Cert.md))
 
 ## License
 

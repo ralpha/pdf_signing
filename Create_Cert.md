@@ -12,6 +12,7 @@ openssl req \
   -out pdf_cert.crt -keyout pdf_cert_private.key \
   -addext extendedKeyUsage=1.3.6.1.4.1.311.80.1,1.2.840.113583.1.1.5 \
   -addext keyUsage=digitalSignature,keyAgreement
+
 # Create PKCS8 cert (contains private key)
 openssl pkcs8 -topk8 -outform PEM -in pdf_cert_private.key -out pkcs8.pem -nocrypt
 # Public key only (only needed for debugging)
