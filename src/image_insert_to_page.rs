@@ -5,6 +5,7 @@ use lopdf::{
 };
 use std::io::Read;
 
+#[allow(dead_code)]
 pub trait InsertImageToPage: InsertImage {
     fn add_xobject<N: Into<Vec<u8>>>(
         &mut self,

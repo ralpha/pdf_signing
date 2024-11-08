@@ -1,6 +1,6 @@
 use crate::error::Error;
 use crate::{ByteRange, PDFSigningDocument, UserSignatureInfo};
-use cryptographic_message_syntax::{Bytes, Oid, SignedContent, SignedDataBuilder};
+use cryptographic_message_syntax::{Bytes, Oid, SignedDataBuilder};
 use lopdf::ObjectId;
 use std::io::Write;
 
@@ -62,7 +62,7 @@ impl PDFSigningDocument {
 
         // Calculate file hash and sign it using the users key
         let signature = SignedDataBuilder::default()
-            .signed_content(SignedContent::External(vec))
+            .content_external(vec)
             .content_type(Oid(Bytes::copy_from_slice(
                 cryptographic_message_syntax::asn1::rfc5652::OID_ID_DATA.as_ref(),
             )))
